@@ -1,0 +1,34 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.homecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 40px;
+  /* background-color: aliceblue; */
+  /* height: 100vh; */
+}
+h2 {
+  position: relative;
+  top: 10px;
+  text-align: center;
+}
+
+.cont1 {
+  width: 800px;
+  height: 500px;
+  background-color: rgba(226, 227, 226, 0.502);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.details {
+  width: 700px;
+  height: 400px;
+}

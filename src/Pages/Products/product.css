@@ -1,0 +1,40 @@
+/* .product {
+  margin-top: 30px;
+} */
+
+.productData {
+  width: 500px;
+  height: 500px;
+  background-color: aliceblue;
+}
+
+/* .product{
+  display: flex;
+  justify-content: center;
+} */
+
+.container {
+  margin-top: 30px;
+  background-color: rgb(114, 97, 75);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  width: 400px;
+  height: 400px;
+  margin-left: 30%;
+  border-radius: 10px;
+  height: 100v;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+}
+
+.footer1 {
+  position: relative;
+  top: 80px;
+}

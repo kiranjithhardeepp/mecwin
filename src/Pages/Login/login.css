@@ -1,0 +1,17 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginbox {
+  width: 500px;
+  height: 500px;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+
