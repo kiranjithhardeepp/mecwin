@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
-import "./product.css";
 import Footer from "../../Components/Footer/Footer";
+import "./product.css"; // Ensure this file contains the required CSS styles
 
 const Products = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [error, setError] = useState(null);
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("authToken");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,25 +45,27 @@ const Products = () => {
     fetchData();
   }, [token]);
 
-  console.log(data);
   return (
     <div className="product">
       <Navbar />
-      <div className="cont1">
+      <div className="cont">
         <div className="container">
-          <ul>
-            {data &&
-              data.map((item, index) => (
-                <li key={index}>
-                  {item.name} {item.id} {item.description}
-                </li>
-              ))}
-          </ul>
+          {data.length > 0 ? (
+            data.map((item) => (
+              <div key={item.id} className="card">
+                <div className="cardItem">
+                  <p>ID: {item.id}</p>
+                  <p>Name: {item.name}</p>
+                  <p>Description: {item.description}</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>No products available</p>
+          )}
         </div>
       </div>
-      <div className="footer1">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };
